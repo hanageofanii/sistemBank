@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistem Bank Debit Kredit</title>
+    <!-- Masukkan stylesheet CSS di sini -->
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistem Bank Debit Kredit</h1>
+        <!-- Navbar atau header lainnya -->
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="rekening.html">Rekening</a></li>
+                <!-- Tambahkan lebih banyak tautan navbar jika diperlukan -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="transaksi">
+            <h2>Transaksi Terkini</h2>
+            <!-- Tabel atau daftar transaksi terkini -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Jenis Transaksi</th>
+                        <th>Jumlah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Isi tabel dengan data transaksi -->
+                    <tr>
+                        <td>01-01-2023</td>
+                        <td>Debit</td>
+                        <td>$500</td>
+                    </tr>
+                    <!-- Tambahkan entri transaksi lainnya -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="buat-transaksi">
+            <h2>Buat Transaksi Baru</h2>
+            <!-- Form untuk membuat transaksi baru -->
+            <form action="proses_transaksi.php" method="POST">
+                <label for="jenis">Jenis Transaksi:</label>
+                <select id="jenis" name="jenis">
+                    <option value="debit">Debit</option>
+                    <option value="kredit">Kredit</option>
+                </select><br><br>
+
+                <label for="jumlah">Jumlah:</label>
+                <input type="number" id="jumlah" name="jumlah" required><br><br>
+
+                <!-- Tambahkan input lainnya seperti deskripsi, tanggal, dll. -->
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hak Cipta &copy; 2023 Sistem Bank Debit Kredit</p>
+    </footer>
+</body>
+</html>
