@@ -1,100 +1,319 @@
-/* Reset default browser styles */
-body, h1, h2, h3, h4, h5, h6, p, ul, li, table {
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Basic styles */
+/* Basic styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
     color: #333;
     margin: 0;
-    padding: 0;
 }
 
 header {
-    background-color: #333;
+    background-color: #003366;
     color: #fff;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
-header nav ul {
-    list-style: none;
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-header nav ul li {
+nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
     display: inline;
     margin-right: 20px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2b00ff;
 }
 
 main {
-    max-width: 800px;
-    margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
 }
 
 section {
+    flex: 0 0 48%;
     margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 8px;
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 12px;
     text-align: left;
 }
 
 table th {
-    background-color: #f4f4f4;
+    background-color: #003366;
+    color: #fff;
 }
 
-form label {
+.buat-transaksi {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.buat-transaksi form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.buat-transaksi label,
+.buat-transaksi input,
+.buat-transaksi select {
     display: block;
-    margin-bottom: 8px;
-}
-
-form input[type="number"],
-form select {
-    width: 100%;
-    padding: 8px;
     margin-bottom: 15px;
 }
 
-form input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+.buat-transaksi input[type="number"],
+.buat-transaksi input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
 }
-form input[type="submit"]:hover {
-    background-color: #555;
+.buat-transaksi input[type="submit"]:hover {
+  background-color: #003366;
+  color: #fff;
+}
+.buat-transaksi input[type="submit"]:focus {
+  outline: none;
 }
 
-/* Styles untuk navbar */
-header nav ul li a {
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    /* clear: both; */
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-button a {
+    color: #fff;
+    font-size: 1.3em;
+    margin-right: 10px;
+    transition: color 0.3s;
+    padding: 10px;
+}
+
+
+.contact-button a:hover {
+    color: #002aff;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer-links ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-    background-color: #555;
+.footer-links ul li a:hover {
+    color: #002aff;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+/* Gaya untuk main content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Gaya untuk setiap section */
+section {
+  width: 70%; /* Atur lebar masing-masing section */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Gaya untuk setiap section title */
+.section-title {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #003366;
+}
+
+/* Gaya untuk tabel transaksi */
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.transaction-table th,
+.transaction-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.transaction-table th {
+  background-color: #003366;
+  color: #fff;
+}
+
+/* Gaya untuk link "Lihat lebih banyak" */
+.more-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #003366;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.more-link:hover {
+  background-color: #ffcc00;
+}
+
+/* Gaya untuk ringkasan rekening */
+.account-info {
+  list-style: none;
+  padding-left: 0;
+}
+
+.account-info li {
+  margin-bottom: 10px;
+}
+
+.account-info strong {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+/* Gaya untuk main content */
+.main-content-rekening {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk bagian detail rekening */
+.account-details {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.account-info p {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.account-info strong {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #555;
+}
+
+/* Gaya untuk riwayat transaksi */
+.transaction-history {
+  border-top: 2px solid #ccc;
+  padding-top: 20px;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.transaction-table th,
+.transaction-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.transaction-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Gaya untuk tautan "Lihat lebih banyak transaksi" */
+.more-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.more-link:hover {
+  background-color: #007bff;
+  color: #fff;
 }

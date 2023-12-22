@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Beranda - Sistem Bank Debit Kredit</title>
-    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Rekening - Sistem Bank Debit Kredit</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -18,13 +18,17 @@
         </nav>
     </header>
 
-    <main class="main-content">
-        <!-- <section class="welcome-section"> -->
-            <h2>Selamat Datang di Sistem Bank Debit Kredit</h2>
-            <p>Di sini Anda dapat melihat informasi terkini tentang rekening, transaksi, dan lebih banyak lagi.</p>
+    <main class="main-content-rekening">
+        <section class="account-details">
+            <h2 class="section-title">Detail Rekening</h2>
+            <div class="account-info">
+                <p><strong>Nomor Rekening:</strong> 1234567890</p>
+                <p><strong>Saldo Saat Ini:</strong> $10,000</p>
+                <!-- Informasi rekening lainnya -->
+            </div>
         </section>
-        <section class="transaction-summary">
-            <h2 class="section-title">Ringkasan Transaksi Terakhir</h2>
+        <section class="transaction-history">
+            <h2 class="section-title">Riwayat Transaksi</h2>
             <table class="transaction-table">
                 <thead>
                     <tr>
@@ -39,21 +43,12 @@
                         <td>Debit</td>
                         <td>$500</td>
                     </tr>
+                    <!-- Data transaksi lainnya -->
                 </tbody>
             </table>
             <a href="transaksi.html" class="more-link">Lihat lebih banyak transaksi</a>
         </section>
-
-        <section class="account-summary">
-            <h2 class="section-title">Ringkasan Rekening</h2>
-            <ul class="account-info">
-                <ul><strong>Nomor Rekening:</strong> 1234567890</ul>
-                <ul><strong>Saldo Saat Ini:</strong> $10,000</ul>
-            </ul>
-            <a href="rekening.html" class="more-link">Lihat rincian rekening</a>
-        </section>
-    </div>
-</main>
+    </main>
 
     <footer>
         <div class="footer-info">
