@@ -242,63 +242,67 @@ section {
   font-weight: bold;
 }
 
-/* Gaya untuk main content */
 .main-content-rekening {
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
 
-/* Gaya untuk bagian detail rekening */
-.account-details {
+.account-details,
+.transaction-history {
+  width: 100%;
   margin-bottom: 30px;
 }
 
 .section-title {
+  margin-bottom: 15px;
   color: #333;
-  font-size: 28px;
-  margin-bottom: 20px;
-  text-align: center;
+}
+
+.account-info {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 .account-info p {
-  margin-bottom: 12px;
-  font-size: 16px;
-}
-
-.account-info strong {
-  font-weight: bold;
-  margin-right: 5px;
-  color: #555;
-}
-
-/* Gaya untuk riwayat transaksi */
-.transaction-history {
-  border-top: 2px solid #ccc;
-  padding-top: 20px;
+  margin-bottom: 10px;
 }
 
 .transaction-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  background-color: #fff;
 }
 
 .transaction-table th,
 .transaction-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
 .transaction-table th {
   background-color: #f2f2f2;
-  font-weight: bold;
-  font-size: 16px;
+}
+
+.more-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.more-link:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 /* Gaya untuk tautan "Lihat lebih banyak transaksi" */
@@ -316,4 +320,36 @@ section {
 .more-link:hover {
   background-color: #007bff;
   color: #fff;
+}
+/* Mengatur tampilan konten transaksi */
+.main-content-transaksi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Gaya untuk setiap detail transaksi */
+.transaction-details {
+  border: 1px solid #ccc; /* Tambahkan garis pembatas */
+  padding: 15px; /* Berikan ruang di dalam setiap detail transaksi */
+  margin-bottom: 5px; /* Berikan jarak antara setiap detail transaksi */
+}
+
+/* Gaya untuk judul detail transaksi */
+.transaction-details h2 {
+  font-size: 1.2em; /* Sesuaikan ukuran font dengan preferensi Anda */
+  margin-bottom: 10px; /* Berikan jarak antara judul dan detail transaksi */
+}
+
+
+/* Gaya untuk elemen teks tebal */
+.transaction-details strong {
+  font-weight: bold; /* Buat teks tebal */
+}
+
+/* Gaya untuk elemen paragraf dalam detail transaksi */
+.transaction-details p {
+  margin: 5px 0; /* Berikan sedikit ruang di antara setiap paragraf */
 }
